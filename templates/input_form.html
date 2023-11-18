@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load static %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+  <script src="{% static 'js/input_form.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'css/input_form.css' %}">
+</head>
+<body>
+  <form method="POST" action="{% url 'save_input' %}">
+    {% csrf_token %}
+    
+    <div class="container">
+      <div class="column">
+        <div class="input-box">
+          <label class="label-text" for="deptselect">Select Your Department</label>
+          <select name="department" id="deptselect" required>
+            <option value=""></option>
+            <option value="aids2017" name="aids2017">B.Tech AI & DS R2017 (Artificial Intelligence and Data Science)</option>
+            <option value="aids2021" name="aids2021">B.Tech AI & DS R2021 (Artificial Intelligence and Data Science)</option>
+            <option value="bme2021" name="bme2021">B.E BME R2021 (Biomedical Engineering)</option>
+            <option value="cse2021" name="cse2021">B.E CSE R2021 (Computer Science and Engineering)</option>
+            <option value="it2021" name="it2021">B.E IT R2021 (Information Technology)</option>
+          </select>                     
+        </div>
+      </div>
+    </div>
+    
+    {% for index in subject_indices %}
+    <div class="container">
+      <div class="column">
+        <div class="input-box">
+          <label class="label-text" for="subject{{ index }}">Subject Code {{ index }}</label>
+          <input type="text" name="subject_code[]" id="subject{{ index }}" maxlength="6" required>
+        </div>
+      </div>
+      <div class="column">
+        <div class="input-box">
+          <label class="label-text" for="grade{{ index }}">Grade for Subject {{ index }}</label>
+          <select name="grades[]" id="grade{{ index }}" required>
+            <option value="" disabled selected>Select a grade</option>
+            <option value="O">O</option>
+            <option value="A+">A+</option>
+            <option value="A">A</option>
+            <option value="B+">B+</option>
+            <option value="B">B</option>
+            {% if index != 'RA' %}
+              <option value="RA">RA</option>
+            {% endif %}
+          </select>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    
+    <div class="button-container">
+      <button type="submit" class="submit-button">Submit</button>
+      <button class="go-back-button" onclick="redirectToHome(homeUrl)">GO BACK</button>
+    </div>
+  </form>
+  <script>
+    var homeUrl = "{% url 'home' %}";
+  </script>
+</body>
+</html>

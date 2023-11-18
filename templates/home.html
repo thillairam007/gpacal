@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna University GPA Calculator</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <script src="{% static 'js/home.js' %}"></script>
+</head>
+<body>
+    <div class="box glowing">
+    <h1>Anna University GPA Calculator</h1>
+    </div>
+    <i><h2>For all Departments</h2></i>
+    <h3>(for All semesters - Subject Code and Grade Enough to Calculate)</h3>
+    <h3 class="nn">Enter Number of Subjects </h3>
+    <form action="{% url 'input_form' %}" id='myform' method="post">
+      {% csrf_token %}
+      <div id="number" style="text-align: center; margin-top: 4px;">
+        <input type="number" name="n" id="n" min="1" max="20" autocomplete="off" required>
+      </div>
+      <div class="button-container">
+      <button type="submit" class="submit-button">Enter</button>
+      </div>
+      <div class="icon-container">
+      <a id="textf">Follow </a>
+      <a href="https://www.linkedin.com/in/thillairam" class="fa fa-linkedin" ></a>
+      <a href="https://www.instagram.com/prince_rockram" class="fa fa-instagram" ></a>
+      <a href="https://www.youtube.com/channel/UCgfQJ-otFR6VEZLHQo0Cfew" class="fa fa-youtube" ></a>
+      </div>
+      </form>  
+
+      
+</body>
+</html>

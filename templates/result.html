@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GPA Display</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/result.css' %}">
+    <script src="{% static 'js/result.js' %}"></script>
+<body>
+        <i><h1 style="font-family: segoe ui light;">Congratulations :-) </h1></i>
+        <p class="gpa">This is your GPA: {{ gpa }}</p>
+        <button onclick="redirectToHome(homeurl)">Calculate Again</button>
+
+</body>
+<script>
+    var homeurl="{% url 'home' %}"
+</script>
+</html>
