@@ -2,21 +2,23 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import mysql.connector
 
-db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="Rockram*008",
-    database="new_schema"
-)
+#local hosting
+
+# db = mysql.connector.connect(
+#     host="localhost",
+#     user="root",
+#     password="Rockram*008",
+#     database="new_schema"
+# )
 
 #online hosting 
 
-# db = mysql.connector.connect(
-#     host="sql12.freesqldatabase.com",
-#     user="sql12622970",
-#     password="i6ZrEaiMN7",
-#     database="sql12622970"
-# )
+db = mysql.connector.connect(
+    host="sql12.freesqldatabase.com",
+    user="sql12663188",
+    password="Z2dbEpT6Ne",
+    database="sql12663188"
+)
 
 # azure 
 
