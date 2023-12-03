@@ -1,0 +1,164 @@
+body {
+    background-color: rgb(0, 0, 0);
+  }
+  h1{
+      color: aliceblue;
+      border: 2px ;
+      text-align: center;
+      font-family: "century gothic regular";
+  }
+  h2{
+      color: rgb(255, 255, 255);
+      font-family: "segoe ui light";
+      text-align: center;
+      margin-top: 50px;
+      position: relative;
+  }
+  h3{
+      color: rgb(150, 72, 104);
+      text-align: center;
+      position: relative;
+      font-family: "segoe ui light";
+  }
+  h3.nn {
+      color: #c7296b;
+      text-align: center;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin-top: 50px;
+      font-family: "segoe ui light";
+      display: inline-block;
+      padding: 5px;
+      border: 2px solid;
+  }
+  
+  
+  .box {
+    text-align: center;
+    position: relative;
+    height: 80px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(0deg,  #c7296b,rgb(0, 0, 0));
+    margin-left: auto;
+    margin-right: auto;
+    margin-right: auto;
+    margin-top: 40px; 
+  }
+  
+  
+  @media (max-width: 767px) { /* Adjust the max-width value based on your design */
+    .box {
+      width: 100%; /* Set the width to 100% for mobile devices */
+      max-width: 600px; /* Set a maximum width if needed */
+    }
+  }
+  
+  /* Styling for input number */
+  input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+
+  
+  #number input[type="number"] {
+      border: 2px solid rgb(0, 68, 255);
+      width: 80px;
+      height: 30px;
+      border-radius: 20px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .submit-button {
+    background-color: #dd2782;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 5px;
+  }
+  
+  .submit-button:hover {
+    background-color: #e7035a;
+    color:rgb(255, 255, 255);
+    font-size: 20px;
+  }
+  
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px; /* Move the container 70 pixels below */
+    border: 2px solid #c7296b;
+    padding: 10px;
+    width: 400px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  
+  .icon-container a {
+    font-size: 30px; /* Adjust the size as needed */
+    margin: 0 30px; /* Adjust the spacing between icons as needed */
+    color: #c7296b;
+  }
+ 
+  .icon-container a:hover{
+    font-size: 60px;
+    margin: 0 30px; /* Adjust the spacing between icons as needed */
+    color: #c7296b;
+  }
+
+  #textf {
+    font-size: large;
+    color: #c7296b;
+    margin-top: -5px;
+    padding: 10px;
+  }
+  
+
+  @media (max-width: 768px) {
+    .icon-container {
+      width: 80%; /* Adjust the container width for mobile */
+      padding: 5px; /* Adjust the padding for mobile */
+    }
+  
+    .icon-container a {
+      font-size: 20px; /* Adjust the icon size for mobile */
+      margin: 0 15px; /* Adjust the icon spacing for mobile */
+    }
+  
+    #textf {
+      font-size: medium; /* Adjust the font size for mobile */
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+
+  
