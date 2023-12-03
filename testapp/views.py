@@ -15,9 +15,9 @@ import mysql.connector
 
 db = mysql.connector.connect(
     host="sql12.freesqldatabase.com",
-    user="sql12663188",
-    password="Z2dbEpT6Ne",
-    database="sql12663188"
+    user="sql12667132",
+    password="631PipKCWs",
+    database="sql12667132"
 )
 
 # azure 
